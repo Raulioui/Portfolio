@@ -1,0 +1,112 @@
+[debug] [2024-10-24T11:47:45.557Z] ----------------------------------------------------------------------
+[debug] [2024-10-24T11:47:45.560Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\Portfolio\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-10-24T11:47:45.560Z] CLI Version:   13.23.0
+[debug] [2024-10-24T11:47:45.560Z] Platform:      win32
+[debug] [2024-10-24T11:47:45.561Z] Node Version:  v20.15.1
+[debug] [2024-10-24T11:47:45.561Z] Time:          Thu Oct 24 2024 13:47:45 GMT+0200 (Central European Summer Time)
+[debug] [2024-10-24T11:47:45.561Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-24T11:47:45.568Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-24T11:47:45.568Z] > authorizing via signed-in user (raulmuelamorey@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Admin\Portfolio
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-10-24T11:47:57.713Z] Checked if tokens are valid: true, expires at: 1729774035825
+[debug] [2024-10-24T11:47:57.713Z] Checked if tokens are valid: true, expires at: 1729774035825
+[debug] [2024-10-24T11:47:57.715Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-10-24T11:47:58.226Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-10-24T11:47:58.226Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2024-10-24T11:49:12.155Z] ----------------------------------------------------------------------
+[debug] [2024-10-24T11:49:12.158Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\Portfolio\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-10-24T11:49:12.158Z] CLI Version:   13.23.0
+[debug] [2024-10-24T11:49:12.158Z] Platform:      win32
+[debug] [2024-10-24T11:49:12.158Z] Node Version:  v20.15.1
+[debug] [2024-10-24T11:49:12.159Z] Time:          Thu Oct 24 2024 13:49:12 GMT+0200 (Central European Summer Time)
+[debug] [2024-10-24T11:49:12.159Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-24T11:49:12.166Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-24T11:49:12.166Z] > authorizing via signed-in user (raulmuelamorey@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Admin\Portfolio
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-10-24T11:49:17.128Z] Checked if tokens are valid: true, expires at: 1729774035825
+[debug] [2024-10-24T11:49:17.129Z] Checked if tokens are valid: true, expires at: 1729774035825
+[debug] [2024-10-24T11:49:17.131Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-10-24T11:49:17.789Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-10-24T11:49:17.789Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project croink-c20e9 (CrossLink) 
+[info] 
+=== Hosting Setup
+[debug] [2024-10-24T11:49:19.885Z] Checked if tokens are valid: true, expires at: 1729774035825
+[debug] [2024-10-24T11:49:19.885Z] Checked if tokens are valid: true, expires at: 1729774035825
+[debug] [2024-10-24T11:49:19.885Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/croink-c20e9 [none]
+[debug] [2024-10-24T11:49:20.680Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/croink-c20e9 200
+[debug] [2024-10-24T11:49:20.681Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/croink-c20e9 {"projectId":"croink-c20e9","projectNumber":"151104586444","displayName":"CrossLink","name":"projects/croink-c20e9","resources":{"hostingSite":"croink-c20e9"},"state":"ACTIVE","etag":"1_6bd7cc7a-60c9-4c6b-89c7-180c58777e7e"}
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\Admin\Portfolio is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=962943554&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-10-24T11:50:08.159Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-10-24T11:50:08.160Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-10-24T11:50:08.572Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-10-24T11:50:08.573Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-10-24T11:50:08.581Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-10-24T11:50:08.993Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-10-24T11:50:08.994Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Raulioui","id":108085230,"node_id":"U_kgDOBnE_7g","avatar_url":"https://avatars.githubusercontent.com/u/108085230?v=4","gravatar_id":"","url":"https://api.github.com/users/Raulioui","html_url":"https://github.com/Raulioui","followers_url":"https://api.github.com/users/Raulioui/followers","following_url":"https://api.github.com/users/Raulioui/following{/other_user}","gists_url":"https://api.github.com/users/Raulioui/gists{/gist_id}","starred_url":"https://api.github.com/users/Raulioui/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Raulioui/subscriptions","organizations_url":"https://api.github.com/users/Raulioui/orgs","repos_url":"https://api.github.com/users/Raulioui/repos","events_url":"https://api.github.com/users/Raulioui/events{/privacy}","received_events_url":"https://api.github.com/users/Raulioui/received_events","type":"User","user_view_type":"private","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":9,"public_gists":0,"followers":0,"following":0,"created_at":"2022-06-23T16:20:57Z","updated_at":"2023-12-29T09:45:26Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":35865,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Raulioui 
+[info] 
+[debug] [2024-10-24T11:50:20.385Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-10-24T11:50:20.645Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-10-24T11:50:20.645Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-10-24T11:50:24.950Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-10-24T11:50:25.120Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-10-24T11:50:25.120Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 

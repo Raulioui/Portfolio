@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro"
+import NextJS from "../components/icons/NextJs.astro"
+import Tailwind from "../components/icons/Tailwind.astro"
+import Solidity from "../components/icons/Solidity.astro"
+import Foundry from "../components/icons/Foundry.astro"
+import LinkButton from "../components/LinkButton.astro"
+import GitHub from "../components/icons/Github.astro"
+import Link from "../components/icons/Link.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  SOLIDITY: {
+    name: "Solidity",
+    class: "bg-white text-black",
+    icon: Solidity,
+  },
+  FOUNDRY: {
+    name: "Foundry",
+    class: "bg-[#FA8016] text-black",
+    icon: Foundry,
+  },
+}
+const PROJECTS = [
+  {
+    title: "Crowdfunding",
+    description:
+      "Plattform that allows you to create single crowdfundings and enter in grants programs",
+    link: "https://crowdfunding-c7d95.web.app/",
+    githubFrontend: "https://github.com/Raulioui/Crowdfunding-Frontend",
+    githubBackend: "https://github.com/Raulioui/Crowdfunding-Backend",
+    image: "../../public/Crowdfunding.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SOLIDITY, TAGS.FOUNDRY],
+  },
+  {
+    title: "CrossLink",
+    description:
+      "No-Oracle borrowing and lending platform integrated with chainlink CCIP",
+    image: "../../public/CrossLink.png",
+    githubBackend: "https://github.com/Raulioui/Crowdfunding-Backend",
+    tags: [TAGS.SOLIDITY, TAGS.FOUNDRY],
+  },
+]
+---
+
+<Layout link="proyects" title="Proyects">
+    <div class="flex flex-col gap-y-16 mx-auto mt-20 lg:mt-0">
+        {PROJECTS.map(({ image, title, description, tags, link, githubFrontend, githubBackend }) => (
+        <article class="flex flex-col space-x-0  space-y-8 group lg:flex-row lg:space-x-8 lg:space-y-0">
+          <div class="w-[400px]">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img loading="lazy" src={image} />
+            </div>
+          </div>
+      
+          <div class="flex flex-col w-[400px] lg:max-w-[700px] justify-between items-start">
+              <div class="flex flex-col justify-between">
+                  <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                      {title}
+                  </h3>
+                  <div class="flex flex-wrap mt-2">
+                      <ul class="flex flex-row my-2 gap-x-2">
+                          {tags.map((tag) => (
+                          <li>
+                              <span
+                              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                              >
+                              <tag.icon class="size-4" />
+                              {tag.name}
+                              </span>
+                          </li>
+                          ))}
+                      </ul>
+                  </div>
+
+                  <div class="mt-2 mb-4 md:mb-0 text-gray-700 dark:text-gray-400">{description}</div>
+              </div>
+
+              <footer class="flex  gap-x-4">
+                  {githubFrontend && (
+                      <LinkButton href={githubFrontend}>
+                      <GitHub class="size-4" />
+                      Frontend    
+                      </LinkButton>
+                  )}
+                  {githubBackend && (
+                      <LinkButton href={githubBackend}>
+                      <GitHub class="size-4" />
+                      Backend
+                      </LinkButton>
+                  )}
+                  {link && (
+                      <LinkButton href={link}>
+                          <Link class="size-4"/>
+                          Preview
+                      </LinkButton>
+                  )}
+              </footer>
+        </div>
+      </article>
+          ))
+        }
+      </div>
+</Layout>
