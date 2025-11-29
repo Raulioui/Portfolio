@@ -7,8 +7,6 @@ import Foundry from "../components/icons/Foundry.astro"
 import LinkButton from "../components/LinkButton.astro"
 import GitHub from "../components/icons/Github.astro"
 import Link from "../components/icons/Link.astro"
-import Python from "../components/icons/Python.astro"
-import Vyper from "../components/icons/Vyper.astro"
 
 const TAGS = {
   NEXT: {
@@ -31,26 +29,17 @@ const TAGS = {
     class: "bg-[#FA8016] text-black",
     icon: Foundry,
   },
-  PYTHON: {
-    name: "Python",
-    class: "bg-[#1e415e] text-white",
-    icon: Python,
-  },
-  VYPER: {
-    name: "Vyper",
-    class: "bg-[#f8f5ee] text-black",
-    icon: Vyper, 
-  }
 }
 const PROJECTS = [
   {
-    title: "RWA-Exchange",
+    title: "Crowdfunding",
     description:
-      "No-Oracle borrowing and lending platform integrated with chainlink CCIP",
-    image: "images/RWA-Exchange.png",
-    githubFrontend: "https://github.com/Raulioui/RWA-DEX-Frontend",
-    githubBackend: "https://github.com/Raulioui/RWA-DEX",
-    tags: [TAGS.SOLIDITY, TAGS.FOUNDRY, TAGS.NEXT, TAGS.TAILWIND],
+      "Plattform that allows you to create single crowdfundings and enter in grants programs",
+    link: "https://quadraticcrowdfunding.vercel.app/",
+    githubFrontend: "https://github.com/Raulioui/Crowdfunding-Frontend",
+    githubBackend: "https://github.com/Raulioui/Crowdfunding-Backend",
+    image: "images/Crowdfunding.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SOLIDITY, TAGS.FOUNDRY],
   },
   {
     title: "CrossLink",
@@ -64,27 +53,20 @@ const PROJECTS = [
     title: "MerkleAirdrop",
     description:
       "Token airdrop using Merkles and signature verification",
-    image: "images/Airdrop.png",
+    image: "images/Airdrop.svg",
     githubBackend: "https://github.com/Raulioui/Merkle-Airdrop",
     tags: [TAGS.SOLIDITY, TAGS.FOUNDRY],
-  },
-  {
-    title: "Vyper-Stablecoin",
-    description: "Simple stablecoin",
-    githubBackend: "https://github.com/Raulioui/Vyper-Stablecoin",
-    image: "images/Vyper-Stablecoin.png",
-    tags: [TAGS.PYTHON, TAGS.VYPER]
   }
 ]
 ---
 
 <Layout link="proyects" title="Proyects">
-    <div class="flex p-12 flex-col justify-around md:flex-row flex-wrap  mt-20">
+    <div class="flex flex-col gap-y-16 mx-auto mt-20 lg:mt-0">
         {PROJECTS.map(({ image, title, description, tags, link, githubFrontend, githubBackend }) => (
-        <article class="flex flex-col mb-12 space-x-0  space-y-8 group lg:flex-row lg:space-x-8 lg:space-y-0">
-          <div class="w-[320px]">
-            <div class="relative flex  w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-              <img loading="lazy" class="object-cover h-48 w-full" src={image} />
+        <article class="flex flex-col space-x-0  space-y-8 group lg:flex-row lg:space-x-8 lg:space-y-0">
+          <div class="w-[400px]">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img loading="lazy" src={image} />
             </div>
           </div>
       
@@ -98,7 +80,7 @@ const PROJECTS = [
                           {tags.map((tag) => (
                           <li>
                               <span
-                              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center`}
+                              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
                               >
                               <tag.icon class="size-4" />
                               {tag.name}
