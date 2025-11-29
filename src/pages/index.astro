@@ -1,22 +1,198 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ContactButton from '../components/ContactButton.astro';
+import Layout from "../layouts/Layout.astro";
+import ContactButton from "../components/ContactButton.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Solidity from "../components/icons/Solidity.astro";
+import Vyper from "../components/icons/Vyper.astro";
+import Python from "../components/icons/Python.astro";
+import NextJS from "../components/icons/NextJs.astro";
+import Tailwind from "../components/icons/Tailwind.astro";
 ---
 
-<Layout link="/" title="Raul Muela Morey's Portfolio">
-	<main class="text-center mx-auto mt-[200px] lg:mt-0 ">
+<Layout link="/" title="Raul Muela Morey – Blockchain Developer">
+	<main
+		class="w-[95%] lg:w-[80%] xl:w-[70%] mx-auto mt-24 lg:mt-0 gap-16 pb-24"
+	>
 		<ContactButton />
-			<h1 class="text-[#FACC15] font-bold text-4xl lg:text-5xl">Smart Contract & Frontend Developer</h1>
-			<h2 class="text-white mt-12 text-4xl lg:text-5xl font-bold">Raul Muela</h2>
-			<a href="https://github.com/Raulioui" class="bg-[#212121] flex-row justify-center cursor-pointer px-8 rounded-lg py-2 text-center inline-flex items-center mt-16 gap-2 hover:scale-110 hover:opacity-100 opacity-70  transition-all duration-200 ease-in-out font-bold text-white">
-				GitHub
-				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<path d="M5 12l14 0" />
-					<path d="M15 16l4 -4" />
-					<path d="M15 8l4 4" />
-				</svg>
-			</a>
+
+		<p
+			class="items-center text-center text-center gap-2 mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-400"
+		>
+			Smart Contracts · DeFi · Chainlink · UI
+		</p>
+
+		<SectionContainer id="hero" class="mt-44">
+			<div class="flex-1 text-center lg:text-left space-y-6">
+				<h1
+					class="text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight"
+				>
+					<span class="text-[#FACC15] block"
+						>Blockchain & Smart Contract Engineer</span
+					>
+					<span class="text-white">
+						building reliable blockchain products and smart contract
+						systems.
+					</span>
+				</h1>
+
+				<p
+					class="text-slate-300 text-base max-w-xl mx-auto lg:mx-0"
+				>
+					I design and implement smart contracts and full-stack dApps,
+					mainly in the EVM ecosystem.I’ve been working with Solidity,
+					modern tooling and blockchain integrations while focusing on
+					clean architecture, security and a good developer
+					experience.
+				</p>
+
+				<div
+					class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
+				>
+					<a
+						href="/proyects"
+						class="inline-flex items-center justify-center rounded-full bg-[#FACC15] px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-yellow-500/20 hover:shadow-yellow-500/40 hover:-translate-y-0.5 transition-all duration-200"
+					>
+						View blockchain projects
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="ml-2 h-4 w-4"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M5 12h14"></path>
+							<path d="M13 6l6 6-6 6"></path>
+						</svg>
+					</a>
+
+					<a
+						href="https://github.com/Raulioui"
+						target="_blank"
+						rel="noreferrer"
+						class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-[#111111] px-6 py-3 text-sm font-semibold text-white hover:border-slate-400 hover:-translate-y-0.5 transition-all duration-200"
+					>
+						<span
+							class="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900"
+						>
+							<svg
+								aria-hidden="true"
+								viewBox="0 0 24 24"
+								class="h-4 w-4"
+								fill="currentColor"
+							>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M12 .5C5.648.5.5 5.648.5 12c0 5.088 3.292 9.395 7.868 10.919.576.108.788-.252.788-.56 0-.276-.012-1.2-.016-2.176-3.2.696-3.876-1.536-3.876-1.536-.524-1.328-1.28-1.68-1.28-1.68-1.048-.716.08-.7.08-.7 1.16.084 1.772 1.192 1.772 1.192 1.032 1.768 2.708 1.258 3.368.96.104-.756.404-1.26.736-1.548-2.552-.292-5.236-1.276-5.236-5.676 0-1.252.448-2.276 1.184-3.08-.12-.292-.512-1.468.112-3.06 0 0 .964-.308 3.16 1.176a10.86 10.86 0 0 1 2.876-.388c.976.004 1.96.132 2.876.388 2.196-1.484 3.16-1.176 3.16-1.176.624 1.592.236 2.768.116 3.06.736.804 1.184 1.828 1.184 3.08 0 4.412-2.688 5.38-5.252 5.668.416.36.792 1.076.792 2.192 0 1.584-.016 2.86-.016 3.252 0 .312.208.676.796.556C20.216 21.39 23.5 17.084 23.5 12 23.5 5.648 18.352.5 12 .5Z"
+								></path>
+							</svg>
+						</span>
+						GitHub profile
+					</a>
+				</div>
+
+				<p class="text-xs text-slate-500 pt-2">
+					Open to blockchain / smart contract roles · Remote or
+					Europe‑based.
+				</p>
+			</div>
+
+			<div class="flex-1 flex mt-20 items-center justify-center">
+				<div class="relative">
+					<div
+						class="absolute -inset-4 rounded-full bg-[#FACC15]/10 blur-3xl"
+						aria-hidden="true"
+					>
+					</div>
+					<div
+						class="relative flex flex-col items-center justify-center rounded-3xl border border-slate-800 bg-gradient-to-b from-slate-900/80 to-black px-10 py-10 shadow-2xl shadow-black/60"
+					>
+						<p
+							class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4"
+						>
+							Recent focus
+						</p>
+						<ul class="space-y-3 text-sm text-slate-200">
+							<li class="flex items-start gap-2">
+								<span
+									class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FACC15]"
+								></span>
+								<span
+									>Cross‑chain lending and staking protocols
+									using Chainlink CCIP.</span
+								>
+							</li>
+							<li class="flex items-start gap-2">
+								<span
+									class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FACC15]"
+								></span>
+								<span
+									>Tokenized real‑world assets with Chainlink
+									Functions + Alpaca API.</span
+								>
+							</li>
+							<li class="flex items-start gap-2">
+								<span
+									class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FACC15]"
+								></span>
+								<span
+									>DeFi primitives: auctions, gauges, custom
+									pools and governance.</span
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</SectionContainer>
+
+		<SectionContainer id="stack" class="mt-12 mb-12">
+			<div
+				class="rounded-3xl border border-slate-800 bg-[#050816]/60 px-6 py-5 lg:px-8 lg:py-6 shadow-xl shadow-black/40"
+			>
+				<p
+					class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400 text-center mb-4"
+				>
+					Core stack
+				</p>
+				<div
+					class="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-200"
+				>
+					<span
+						class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-black/60 px-3 py-1.5"
+					>
+						<Solidity class="size-4" />
+						Solidity · Foundry
+					</span>
+					<span
+						class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-black/60 px-3 py-1.5"
+					>
+						<Vyper class="size-4" />
+						Vyper
+					</span>
+					<span
+						class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-black/60 px-3 py-1.5"
+					>
+						<Python class="size-4" />
+						Python · Chainlink Functions
+					</span>
+					<span
+						class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-black/60 px-3 py-1.5"
+					>
+						<NextJS class="size-4" />
+						Next.js · wagmi · RainbowKit
+					</span>
+					<span
+						class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-black/60 px-3 py-1.5"
+					>
+						<Tailwind class="size-4" />
+						TailwindCSS · Astro
+					</span>
+				</div>
+			</div>
+		</SectionContainer>
 	</main>
 </Layout>
-

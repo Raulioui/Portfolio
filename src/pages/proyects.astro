@@ -39,101 +39,131 @@ const TAGS = {
   VYPER: {
     name: "Vyper",
     class: "bg-[#f8f5ee] text-black",
-    icon: Vyper, 
-  }
+    icon: Vyper,
+  },
 }
+
 const PROJECTS = [
   {
-    title: "RWA-Exchange",
+    title: "RWA Exchange",
+    role: "Tokenized real-world assets · DeFi",
     description:
-      "No-Oracle borrowing and lending platform integrated with chainlink CCIP",
+      "Decentralized exchange for tokenized real-world assets (e.g. stocks) using USDT as settlement. On-chain AssetPool coordinates mint/redeem of tokens backed by an off-chain broker via Chainlink Functions and the Alpaca API.",
     image: "images/RWA-Exchange.png",
     githubFrontend: "https://github.com/Raulioui/RWA-DEX-Frontend",
     githubBackend: "https://github.com/Raulioui/RWA-DEX",
-    tags: [TAGS.SOLIDITY, TAGS.FOUNDRY, TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.SOLIDITY, TAGS.FOUNDRY, TAGS.NEXT, TAGS.TAILWIND, TAGS.PYTHON],
   },
   {
     title: "CrossLink",
+    role: "Cross-chain lending · CCIP",
     description:
-      "No-Oracle borrowing and lending platform integrated with chainlink CCIP",
+      "No-oracle borrowing and lending protocol using Chainlink CCIP to coordinate cross-chain positions. Focused on protocol design, liquidation flows and safe messaging between chains instead of relying on traditional price oracles.",
     image: "images/CrossLink.png",
     githubBackend: "https://github.com/Raulioui/CrossLink",
     tags: [TAGS.SOLIDITY, TAGS.FOUNDRY],
   },
   {
-    title: "MerkleAirdrop",
+    title: "Merkle Airdrop",
+    role: "Gas-efficient distribution",
     description:
-      "Token airdrop using Merkles and signature verification",
+      "ERC20 token airdrop using Merkle trees and signature verification for claims. Designed to reduce on-chain storage and gas costs while preserving a clear audit trail of allocations.",
     image: "images/Airdrop.png",
     githubBackend: "https://github.com/Raulioui/Merkle-Airdrop",
     tags: [TAGS.SOLIDITY, TAGS.FOUNDRY],
   },
   {
-    title: "Vyper-Stablecoin",
-    description: "Simple stablecoin",
+    title: "Vyper Stablecoin",
+    role: "Protocol fundamentals in Vyper",
+    description:
+      "Simple stablecoin prototype written in Vyper to explore ERC20 mechanics, collateralized minting and basic protocol invariants in a different smart contract language.",
     githubBackend: "https://github.com/Raulioui/Vyper-Stablecoin",
     image: "images/Vyper-Stablecoin.png",
-    tags: [TAGS.PYTHON, TAGS.VYPER]
-  }
+    tags: [TAGS.PYTHON, TAGS.VYPER],
+  },
 ]
 ---
 
-<Layout link="proyects" title="Proyects">
-    <div class="flex p-12 flex-col justify-around md:flex-row flex-wrap  mt-20">
-        {PROJECTS.map(({ image, title, description, tags, link, githubFrontend, githubBackend }) => (
-        <article class="flex flex-col mb-12 space-x-0  space-y-8 group lg:flex-row lg:space-x-8 lg:space-y-0">
-          <div class="w-[320px]">
-            <div class="relative flex  w-full h-full flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-              <img loading="lazy" class="object-cover h-48 w-full" src={image} />
+<Layout link="proyects" title="Projects – Raul Muela Morey">
+  <main class="max-w-6xl mx-auto mt-24 px-6 pb-24">
+    <header class="mb-10">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">
+        Selected work
+      </p>
+      <h1 class="mt-2 text-3xl lg:text-4xl font-bold text-white">
+        Blockchain projects
+      </h1>
+      <p class="mt-3 max-w-2xl text-sm lg:text-base text-slate-400">
+        A selection of smart contract and DeFi projects I’ve built recently.
+        Each one is focused on a specific part of the stack: protocol design,
+        cross-chain messaging, gas-efficient token mechanics or experimenting
+        with new languages and tooling.
+      </p>
+    </header>
+
+    <section class="space-y-10">
+      {PROJECTS.map(({ image, title, role, description, tags, link, githubFrontend, githubBackend }) => (
+        <article class="group flex flex-col lg:flex-row gap-6 lg:gap-10 rounded-2xl border border-slate-800 bg-[#050816]/60 p-4 lg:p-6 shadow-lg shadow-black/40 transition-transform duration-200 hover:-translate-y-1 hover:border-slate-600">
+          <div class="w-full lg:w-[320px] shrink-0">
+            <div class="relative overflow-hidden rounded-xl border border-slate-800/70 bg-black/60">
+              <img
+                loading="lazy"
+                class="h-48 w-full object-cover"
+                src={image}
+                alt={title}
+              />
             </div>
           </div>
-      
-          <div class="flex flex-col w-[400px] lg:max-w-[700px] justify-between items-start">
-              <div class="flex flex-col justify-between">
-                  <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                      {title}
-                  </h3>
-                  <div class="flex flex-wrap mt-2">
-                      <ul class="flex flex-row my-2 gap-x-2">
-                          {tags.map((tag) => (
-                          <li>
-                              <span
-                              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 items-center`}
-                              >
-                              <tag.icon class="size-4" />
-                              {tag.name}
-                              </span>
-                          </li>
-                          ))}
-                      </ul>
-                  </div>
 
-                  <div class="mt-2 mb-4 md:mb-0 text-gray-700 dark:text-gray-400">{description}</div>
+          <div class="flex flex-1 flex-col justify-between">
+            <div>
+              <h3 class="text-xl lg:text-2xl font-semibold text-white">
+                {title}
+              </h3>
+
+              {role && (
+                <p class="mt-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-400">
+                  {role}
+                </p>
+              )}
+
+              <div class="mt-3 flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                  <span class={`inline-flex items-center gap-2 rounded-full text-[11px] ${tag.class} py-1 px-3`}>
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                ))}
               </div>
 
-              <footer class="flex gap-x-4 ">
-                  {githubFrontend && (
-                      <LinkButton href={githubFrontend}>
-                      <GitHub class="size-4" />
-                      Frontend    
-                      </LinkButton>
-                  )}
-                  {githubBackend && (
-                      <LinkButton href={githubBackend}>
-                      <GitHub class="size-4" />
-                      Backend
-                      </LinkButton>
-                  )}
-                  {link && (
-                      <LinkButton href={link}>
-                          <Link class="size-4"/>
-                          Preview
-                      </LinkButton>
-                  )}
-              </footer>
-        </div>
-      </article>
-          ))
-        }
-      </div>
+              <p class="mt-4 text-sm lg:text-base text-slate-300">
+                {description}
+              </p>
+            </div>
+
+            <footer class="mt-4 flex flex-wrap gap-3">
+              {githubFrontend && (
+                <LinkButton href={githubFrontend}>
+                  <GitHub class="size-4" />
+                  Frontend
+                </LinkButton>
+              )}
+              {githubBackend && (
+                <LinkButton href={githubBackend}>
+                  <GitHub class="size-4" />
+                  Backend
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Live demo
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </article>
+      ))}
+    </section>
+  </main>
 </Layout>

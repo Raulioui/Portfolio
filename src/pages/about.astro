@@ -2,25 +2,64 @@
 import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout link="about" title="About">
-    <div class="flex flex-col items-center justify-center mx-auto">
-        <div class="text-white mt-20 lg:mt-0 w-[90%] text-center mx-auto text-lg">
-            <div class="mb-8">
-                <img
-                    src="images/Avatar.png"
-                    width="100"
-                    height="100"
-                    decoding="async"
-                    loading="lazy"
-                    alt="My Avatar"
-                    class="m-auto w-[120px] rounded-full mb-4"
-                /> 
-    
-                <h1><span class="text-[#FACC15] font-bold text-2xl ">Hi!</span> I'm Raul Muela</h1>
-            </div>
-    
-            <p class="max-w-[800px] mx-auto mb-6">I'm from Mallorca, Spain, I started programming 5 years ago simple thinks, so i decided study a 2 years degree of web development at <a class="underline" href="https://www.cesurformacion.com/">Cesur</a>, that i'm currently finishing.</p>
-            <p class="max-w-[800px] mx-auto">Along my journey i started playing with the Web3 world and i became fascinated, so 2 years ago i started investigating this world by my own, now i spend most of my time enjoing developing apps for the web3 space!!</p>
-        </div>
+<Layout link="about" title="About – Raul Muela Morey">
+  <main class="max-w-3xl mx-auto mt-24 px-6 pb-24 flex flex-col items-center">
+    <div class="mb-8 text-center">
+      <img
+        src="images/Avatar.png"
+        width="120"
+        height="120"
+        decoding="async"
+        loading="lazy"
+        alt="Raul's avatar"
+        class="mx-auto w-[120px] rounded-full mb-4 border border-slate-700 shadow-lg shadow-black/40"
+      />
+
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">
+        About me
+      </p>
+      <h1 class="mt-2 text-2xl lg:text-3xl font-bold text-white">
+        Hi, I’m <span class="text-[#FACC15]">Raul Muela</span>
+      </h1>
     </div>
+
+    <section class="space-y-4 text-base lg:text-lg text-slate-300 text-center lg:text-left">
+      <p>
+        I’m from Mallorca, Spain. I started programming about five years ago,
+        building small projects and experimenting on my own. That eventually led
+        me to study a two-year Web Development degree at
+        <a
+          class="underline decoration-slate-500 underline-offset-4 hover:decoration-[#FACC15]"
+          href="https://www.cesurformacion.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Cesur
+        </a>, which I’m currently finishing.
+      </p>
+
+      <p>
+        Along the way I discovered the world of Web3 and got hooked. For the
+        last couple of years I’ve been focusing on blockchain development:
+        learning how smart contracts work, how to design protocols and how to
+        ship real dApps end-to-end. These days, most of my coding time goes into
+        building applications for the Web3 space and improving my skills around
+        smart contracts and tooling.
+      </p>
+
+      <p>
+        I enjoy working on problems where I can mix on-chain logic with
+        real-world use cases, write clear and maintainable code and back it up
+        with good tests. I care about understanding how things work under the
+        hood and I like to keep learning new tools, patterns and ideas from the
+        ecosystem.
+      </p>
+
+      <p class="pt-2 text-sm lg:text-base text-slate-400">
+        I’m currently looking for opportunities as a blockchain / smart contract
+        developer where I can contribute, keep learning from experienced people
+        and help build useful products in the space.
+      </p>
+    </section>
+  </main>
 </Layout>
