@@ -48,17 +48,18 @@ const PROJECTS = [
     title: "RWA Exchange",
     role: "Tokenized real-world assets · DeFi",
     description:
-      "Decentralized exchange for tokenized real-world assets (e.g. stocks) using USDT as settlement. On-chain AssetPool coordinates mint/redeem of tokens backed by an off-chain broker via Chainlink Functions and the Alpaca API.",
+      "Decentralized exchange for tokenized real-world assets (stocks) using BrokerDollar as settlement. Solves the async mismatch between on-chain execution and off-chain broker APIs using a request-based state machine powered by Chainlink Functions and the Alpaca API.",
     image: "images/RWA-Exchange.png",
-    githubFrontend: "https://github.com/Raulioui/RWA-DEX-Frontend",
+    githubFrontend: "https://github.com/Raulioui/RWA-FRONTEND",
     githubBackend: "https://github.com/Raulioui/RWA-DEX",
+    link: "https://rwa-exchange-one.vercel.app/",
     tags: [TAGS.SOLIDITY, TAGS.FOUNDRY, TAGS.NEXT, TAGS.TAILWIND, TAGS.PYTHON],
   },
   {
     title: "CrossLink",
     role: "Cross-chain lending · CCIP",
     description:
-      "No-oracle borrowing and lending protocol using Chainlink CCIP to coordinate cross-chain positions. Focused on protocol design, liquidation flows and safe messaging between chains instead of relying on traditional price oracles.",
+      "Research prototype combining oracle-free risk management, cross-chain loans via Chainlink CCIP, and gauge-based governance inspired by Curve. Collateral capacity is determined by internal protocol P&L instead of external price feeds, removing oracle manipulation risk.",
     image: "images/CrossLink.png",
     githubBackend: "https://github.com/Raulioui/CrossLink",
     tags: [TAGS.SOLIDITY, TAGS.FOUNDRY],
